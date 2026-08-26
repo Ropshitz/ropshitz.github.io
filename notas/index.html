@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maga's Philosophy Notes</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="desktop.css">
+        <link rel="icon" type="image/png" href="./favicon.png"/>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h5 id="pre-author">Notas de</h5>
+        <h4 id="author">Maga</h4>
+        <p id="title-info">by Maga, last edited <span>
+August 25, 2026.</span></p><ol id="contents">
+    <li>Building a Note-Taking Pipeline
+        <ol>
+            <li><a href="#git">Git, GitHub, and Obsidian</a></li>
+            <li><a href="#zotero">Zotero and Zotero-Scipdf</a></li>
+            <li><a href="#better-notes">Better Notes and Syncing</a></li>
+            <li><a href="#ocr">OCR with Tesseract</a></li>
+        </ol>
+    </li>
+</ol>
+<section class="content">
+<h2 id="pipeline">Building a Note-Taking Pipeline</h2>
+<p>So you want to finally overwork your simple academic assignments and
+stop using NotebookLM because you cannot remember a passage you read
+months ago?</p>
+<p>It seems you came to the right place…</p>
+<figure>
+<img src="images/1-doctor-strange.png"
+alt="Whatever trials await, Doctor Strange must be prepared!" />
+<figcaption aria-hidden="true">Whatever trials await, Doctor Strange
+must be prepared!</figcaption>
+</figure>
+<h3 id="git">Git, GitHub, and Obsidian</h3>
+<p>So, first of all, if you want complete control over your notes, I
+strongly recommend having Git (which is absolutely necessary for some
+Zotero extensions), a Github/Gitlab account and Obsidian. Git can be
+downloaded from its own site: <a
+href="https://git-scm.com/download/win">git-scm.com/download/win</a>
+(since this is for absolute beginners, yes, you are using Windows x64).
+It’s pretty easy, I promise I’m not trying to make you all use
+Emacs.</p>
+<figure>
+<img src="images/2-journey.png"
+alt="For months he traveled – alone and on foot – across the roof of the world until, at last, he reached his destination…" />
+<figcaption aria-hidden="true">For months he traveled – alone and on
+foot – across the roof of the world until, at last, he reached his
+destination…</figcaption>
+</figure>
+<p>There are even tools, like LazyGit, that allow you to understand Git
+processes through visualization (UI). I still think it’s a very
+interesting repo, but you don’t really need it if you are a beginner,
+just ask an AI for the steps.</p>
+<p>Set up a Github account, create a private repo and use the Obsidian
+extension to connect with your repositories as your archive.</p>
+<p>Just click on repositories and hit “New”</p>
+<figure>
+<img src="images/3-github-new-repo.png"
+alt="Creating a new repository on GitHub" />
+<figcaption aria-hidden="true">Creating a new repository on
+GitHub</figcaption>
+</figure>
+<p>And in your Obsidian vault, you just need to allow for community
+plugins and then search “Github”.</p>
+<figure>
+<img src="images/4-github-sync-plugin.png"
+alt="The GitHub Sync community plugin for Obsidian" />
+<figcaption aria-hidden="true">The GitHub Sync community plugin for
+Obsidian</figcaption>
+</figure>
+<p>Trust me, this is going to make finding everything in the future way
+easier.</p>
+<figure>
+<img src="images/5-doom.png"
+alt="Pain? Pain is like love, compassion. It is a thing only for lesser men! What is pain to Doom?" />
+<figcaption aria-hidden="true">Pain? Pain is like love, compassion. It
+is a thing only for lesser men! What is pain to Doom?</figcaption>
+</figure>
+<h3 id="zotero">Zotero and Zotero-Scipdf</h3>
+<p>Now, for Zotero, download it from <a
+href="https://www.zotero.org/download/">zotero.org/download</a> (and
+also its Connector for the browser).</p>
+<p>For the thing that everyone is way more eager to use, it is called
+Zotero-Scipdf. First, you need to download Zotero and put its extension
+in your browser. Then, download the first file from this list here: <a
+href="https://github.com/syt2/zotero-scipdf/releases/tag/V8.1.0">zotero-scipdf
+releases (v8.1.0)</a>. With it in your Downloads, go to Tools and click
+on install add-on from file.</p>
+<figure>
+<img src="images/6-zotero-tools-menu.png"
+alt="The Zotero Tools menu, with the option to install an add-on from file" />
+<figcaption aria-hidden="true">The Zotero Tools menu, with the option to
+install an add-on from file</figcaption>
+</figure>
+<p>After that you just have to click Fetch PDF and it will search
+automatically (you can forget plenty of information, except the
+article’s DOI, or it won’t find anything).</p>
+<figure>
+<img src="images/7-zotero-plugins-menu.png"
+alt="Installing and updating a Zotero plugin from file" />
+<figcaption aria-hidden="true">Installing and updating a Zotero plugin
+from file</figcaption>
+</figure>
+<p>But what about the other ones?</p>
+<h3 id="better-notes">Better Notes and Syncing</h3>
+<p>Do you remember we talked about Obsidian? The nicest way is probably
+to download it and set it up to push your changes to Github right away.
+For that, I would install <a
+href="https://github.com/windingwind/zotero-better-notes/releases">zotero-better-notes</a>.
+And then you just pull the notes in Markdown and drop them there. With
+everything set up in Obsidian and Github, you will never have to worry
+about this again.</p>
+<h3 id="ocr">OCR with Tesseract</h3>
+<p>What about OCR?</p>
+<p>You will need the open-source OCR engine called Tesseract. It’s
+pretty easy, and once installed it even works inside your Terminal,
+without the need of Zotero.</p>
+<p>The latest installer can be downloaded here:
+<code>tesseract-ocr-w64-setup-5.5.3.20260724.exe</code> (64 bit).</p>
+<p>And then you need to go to <code>zotero-ocr-0.9.5.1.xpi</code> and do
+the same installation process as the other extensions (install the
+<code>.xpi</code> as a plugin in your Zotero).</p>
