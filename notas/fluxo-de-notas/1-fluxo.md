@@ -8,7 +8,7 @@ It seems you came to the right place...[^1]
 
 ### Git, GitHub, and Obsidian {#git}
 
-So, first of all, if you want complete control over your notes, I strongly recommend having Git (which is absolutely necessary for some Zotero extensions), a Github/Gitlab account and Obsidian. Git can be downloaded from its own site: [git-scm.com/download/win](https://git-scm.com/download/win) (since this is for absolute beginners, yes, you are using Windows x64). It's pretty easy, I promise I'm not trying to make you all use Emacs.
+So, first of all, if you want complete control over your notes, I strongly recommend having Git (which is absolutely necessary for some Zotero extensions), a Github/Gitlab account and Obsidian.[^2] Git can be downloaded from its own site: [git-scm.com/download/win](https://git-scm.com/download/win) (since this is for absolute beginners, yes, you are using Windows x64). It's pretty easy, I promise I'm not trying to make you all use Emacs.
 
 ![For months he traveled -- alone and on foot -- across the roof of the world until, at last, he reached his destination...](images/2-journey.png)
 
