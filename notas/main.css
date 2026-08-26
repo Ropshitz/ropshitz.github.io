@@ -173,16 +173,18 @@ img#title {
     width: 55%;
 }
 
-#title-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8em;
-    margin-top: 20px;
+#title-wrap {
+    position: relative;
+    display: table;
+    margin: 20px auto 0 auto;
 }
 
 #title-mascot {
-    height: 4.5em;
+    position: absolute;
+    top: 50%;
+    right: -2.6em;
+    transform: translateY(-50%);
+    height: 3.4em;
     width: auto;
 }
 
