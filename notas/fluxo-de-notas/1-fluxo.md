@@ -1,8 +1,8 @@
-## Building a Note-Taking Pipeline {#pipeline}
+## One App to Rule Them All {#pipeline}
 
 So you want to finally overwork your simple academic assignments and stop using NotebookLM because you cannot remember a passage you read months ago?
 
-It seems you came to the right place...
+It seems you came to the right place...[^1]
 
 ![Whatever trials await, Doctor Strange must be prepared!](images/1-doctor-strange.png)
 
@@ -52,6 +52,6 @@ What about OCR?
 
 You will need the open-source OCR engine called Tesseract. It's pretty easy, and once installed it even works inside your Terminal, without the need of Zotero.
 
-The latest installer can be downloaded here: `tesseract-ocr-w64-setup-5.5.3.20260724.exe` (64 bit).
+The latest installer can be downloaded here: [tesseract-ocr-w64-setup-5.5.3.20260724.exe](https://github.com/tesseract-ocr/tesseract/releases/download/5.5.3/tesseract-ocr-w64-setup-5.5.3.20260724.exe) (64 bit).
 
-And then you need to go to `zotero-ocr-0.9.5.1.xpi` and do the same installation process as the other extensions (install the `.xpi` as a plugin in your Zotero).
+And then you need to go to [zotero-ocr-0.9.5.1.xpi](https://github.com/UB-Mannheim/zotero-ocr/releases/download/0.9.5.1/zotero-ocr-0.9.5.1.xpi) and do the same installation process as the other extensions (install the `.xpi` as a plugin in your Zotero).
