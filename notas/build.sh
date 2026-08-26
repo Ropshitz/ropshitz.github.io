@@ -26,7 +26,7 @@ for i in "${chapters[@]}"; do
         pandoc $i/[0-99]*.md $i/$FN -o $TEMP
         cp top-header.html index.html
         # Insert date for 'last edited' line:
-        printf "$(date '+%B %e, %Y').</span></p></div>" >> index.html
+        printf "$(date '+%B %e, %Y').</span></p>" >> index.html
         cat $i/contents.html >> index.html
         cat $TEMP >> index.html
         rm $TEMP
