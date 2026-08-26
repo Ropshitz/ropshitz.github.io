@@ -173,6 +173,19 @@ img#title {
     width: 55%;
 }
 
+#title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    margin-top: 20px;
+}
+
+#title-mascot {
+    height: 4.5em;
+    width: auto;
+}
+
 .content figure {
     margin: 2em auto;
     text-align: center;
