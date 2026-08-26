@@ -19,7 +19,7 @@ body {
     margin: 3% auto;
 
     font-family: 'Arno Pro', 'ap', Garamond, Georgia, serif;
-    font-size: 13pt;
+    font-size: 14pt;
     font-feature-settings: 'onum';
     color: var(--black);
     background: var(--pale);
@@ -31,7 +31,7 @@ body {
 
 .content {
     margin: 0 auto;
-    font-size: 110%;
+    font-size: 116%;
 }
 
 p,

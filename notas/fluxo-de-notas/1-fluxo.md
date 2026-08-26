@@ -1,5 +1,19 @@
 ## One App to Rule Them All {#pipeline}
 
+<blockquote class="epigraph">To revere mementos of the past is sometimes labeled sentimental or
+antiquarian by people who thoughtlessly repeat the cliché that to live fully we
+must concentrate on the present or the future and not dwell on the past.
+Ignoring the past, however, is not a choice that we have: to live fully
+presumably involves, by any definition, taking in our surroundings, making
+them our own, even if that comes to mean the embracing of chaos and
+alienation; and this process brings us face to face with the past, for
+everything we encounter is from the past. Our world is a world of artifacts.
+(Whether we choose to believe that objects owe their existence to our
+perception is irrelevant in this regard, for we still distinguish two levels
+of creativity: what we imagine that we have inherited, and what we do with
+it.) <footer>G. Thomas Tanselle, <em>A Rationale of Textual
+Criticism</em></footer></blockquote>
+
 So you want to finally overwork your simple academic assignments and stop using NotebookLM because you cannot remember a passage you read months ago?
 
 It seems you came to the right place...[^1]
