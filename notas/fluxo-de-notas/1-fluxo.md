@@ -12,7 +12,7 @@ everything we encounter is from the past. Our world is a world of artifacts.
 perception is irrelevant in this regard, for we still distinguish two levels
 of creativity: what we imagine that we have inherited, and what we do with
 it.) <footer>G. Thomas Tanselle, <em>A Rationale of Textual
-Criticism</em></footer></blockquote>
+Criticism</em>[^3]</footer></blockquote>
 
 So you want to finally overwork your simple academic assignments and stop using NotebookLM because you cannot remember a passage you read months ago?
 
