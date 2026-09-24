@@ -16,7 +16,7 @@
 # Requires pandoc (https://pandoc.org).
 #
 
-posts=('fluxo-de-notas')
+posts=('maimonides-thursdays' 'fluxo-de-notas')
 
 FN=x-footnotes.md
 TEMP=temp.html
