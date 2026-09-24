@@ -21,13 +21,24 @@ posts=('fluxo-de-notas')
 FN=x-footnotes.md
 TEMP=temp.html
 
+months=(jan fev mar abr mai jun jul ago set out nov dez)
+
 cp header.html index.html
-echo '        <ol id="posts">' >> index.html
+cat >> index.html <<HEAD
+        <p class="list-heading">Todas as notas</p>
+        <p class="ornament">❦</p>
+        <ol id="posts">
+HEAD
 
 for i in "${posts[@]}"; do
     title=$(sed -n 1p $i/meta.txt)
-    date=$(LC_ALL=C date -d "$(sed -n 2p $i/meta.txt)" '+%B %-d, %Y')
+    iso=$(sed -n 2p $i/meta.txt)
+    date=$(LC_ALL=C date -d "$iso" '+%B %-d, %Y')
+    day=$(date -d "$iso" '+%-d')
+    month="${months[$(( $(date -d "$iso" '+%-m') - 1 ))]} $(date -d "$iso" '+%Y')"
     summary=$(sed -n 3p $i/meta.txt)
+    # reading time, at ~200 words a minute
+    minutes=$(( ($(cat $i/[0-99]*.md | wc -w) + 199) / 200 ))
 
     # Post page
     pandoc $i/[0-99]*.md $i/$FN -o $TEMP
@@ -42,11 +53,20 @@ for i in "${posts[@]}"; do
     # Entry on the front page
     cat >> index.html <<ENTRY
             <li>
-                <a href="$i.html">$title</a>
-                <span class="post-date">$date</span>
-                <p class="post-summary">$summary</p>
+                <a class="post" href="$i.html">
+                    <time class="post-date" datetime="$iso">
+                        <span class="post-day">$day</span>
+                        <span class="post-month">$month</span>
+                    </time>
+                    <span class="post-title">$title</span>
+                    <span class="post-summary">$summary</span>
+                    <span class="post-meta">$minutes min de leitura · ler →</span>
+                </a>
             </li>
 ENTRY
 done
 
-echo '        </ol>' >> index.html
+cat >> index.html <<FOOT
+        </ol>
+        <p class="list-footer">⁂</p>
+FOOT
