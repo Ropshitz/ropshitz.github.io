@@ -358,3 +358,49 @@ img#title {
 #moving-header {
     display: none;
 }
+
+/* front page: list of posts */
+
+#posts {
+    max-width: 36em;
+    margin: 3em auto 4em auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#posts li { margin-bottom: 2em; }
+
+#posts a { font-size: 1.3em; }
+
+.post-date {
+    display: block;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+#posts .post-summary {
+    margin-top: 0.3em;
+    text-align: left;
+}
+
+/* link back to the front page, at the end of a post */
+
+#back {
+    margin-top: 3em;
+    text-align: center;
+}
+
+/* the title links to the front page */
+
+a#home-link[href] {
+    color: inherit;
+    text-decoration: none;
+}
+
+#back-top {
+    margin: 0.8em 0 0 0;
+    text-align: center;
+    font-size: 0.9em;
+}

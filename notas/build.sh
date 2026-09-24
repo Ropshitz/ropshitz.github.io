@@ -1,41 +1,52 @@
 #!/usr/bin/env bash
 
 #
-# Each chapter produces a single HTML page; the
-# source for a chapter is in a single folder
-# (listed below), consisting of
+# Each post produces a single HTML page (<folder>.html);
+# the source for a post is in a single folder (listed
+# below, newest first), consisting of
 #
+#       'meta.txt'       - three lines: title, date (YYYY-MM-DD), summary
 #       'contents.html'  - a table of contents
-#       '[1-99]*.md'     - the main body of the chapter
-#       'x-footnotes.md' - the footnotes for the chapter
+#       '[1-99]*.md'     - the main body of the post
+#       'x-footnotes.md' - the footnotes for the post
 #
-# The first chapter is slightly different; it produces
-# the index.html file and has the full table of contents.
+# index.html is the blog's front page: a list of every
+# post, built from the meta.txt files.
 #
 # Requires pandoc (https://pandoc.org).
 #
 
-chapters=('fluxo-de-notas')
+posts=('fluxo-de-notas')
 
 FN=x-footnotes.md
 TEMP=temp.html
 
-for i in "${chapters[@]}"; do
-    # First chapter
-    if [ $i = ${chapters[0]} ]; then
-        pandoc $i/[0-99]*.md $i/$FN -o $TEMP
-        cp top-header.html index.html
-        # Insert date for 'last edited' line:
-        printf "$(date '+%B %e, %Y').</span></p>" >> index.html
-        cat $i/contents.html >> index.html
-        cat $TEMP >> index.html
-        rm $TEMP
-    # Other chapters
-    else
-        pandoc $i/[0-99]*.md $i/$FN -o $TEMP
-        cp header.html $i.html
-        cat $i/contents.html >> $i.html
-        cat $TEMP >> $i.html
-        rm $TEMP
-    fi
+cp header.html index.html
+echo '        <ol id="posts">' >> index.html
+
+for i in "${posts[@]}"; do
+    title=$(sed -n 1p $i/meta.txt)
+    date=$(LC_ALL=C date -d "$(sed -n 2p $i/meta.txt)" '+%B %-d, %Y')
+    summary=$(sed -n 3p $i/meta.txt)
+
+    # Post page
+    pandoc $i/[0-99]*.md $i/$FN -o $TEMP
+    cp header.html $i.html
+    echo '        <p id="back-top"><a href="./">← Todas as notas</a></p>' >> $i.html
+    echo "        <p id=\"title-info\">by Maga, $date.</p>" >> $i.html
+    cat $i/contents.html >> $i.html
+    cat $TEMP >> $i.html
+    echo '<p id="back"><a href="./">← Todas as notas</a></p>' >> $i.html
+    rm $TEMP
+
+    # Entry on the front page
+    cat >> index.html <<ENTRY
+            <li>
+                <a href="$i.html">$title</a>
+                <span class="post-date">$date</span>
+                <p class="post-summary">$summary</p>
+            </li>
+ENTRY
 done
+
+echo '        </ol>' >> index.html
