@@ -459,14 +459,6 @@ a#home-link[href] {
     opacity: 0.85;
 }
 
-.post-meta {
-    margin-top: 0.6em;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-size: 0.85em;
-    opacity: 0.55;
-}
 
 @media (max-width: 480px) {
     #posts a.post { grid-template-columns: 3.5em 1fr; column-gap: 1em; padding: 1.2em 0.4em; }

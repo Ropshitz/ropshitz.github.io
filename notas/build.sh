@@ -37,8 +37,6 @@ for i in "${posts[@]}"; do
     day=$(date -d "$iso" '+%-d')
     month="${months[$(( $(date -d "$iso" '+%-m') - 1 ))]} $(date -d "$iso" '+%Y')"
     summary=$(sed -n 3p $i/meta.txt)
-    # reading time, at ~200 words a minute
-    minutes=$(( ($(cat $i/[0-99]*.md | wc -w) + 199) / 200 ))
 
     # Post page
     pandoc $i/[0-99]*.md $i/$FN -o $TEMP
@@ -60,7 +58,6 @@ for i in "${posts[@]}"; do
                     </time>
                     <span class="post-title">$title</span>
                     <span class="post-summary">$summary</span>
-                    <span class="post-meta">$minutes min de leitura · ler →</span>
                 </a>
             </li>
 ENTRY
