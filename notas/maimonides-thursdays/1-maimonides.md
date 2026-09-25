@@ -4,7 +4,9 @@
 
 <!-- Intro paragraph — sets up the Thursday seminar and the problem: teaching a heavy religious text to a secular room. -->
 
-### Section title {#section-1}
+![Maimonides (left) and ibn Ezra (right), Ms. Heb. 8°3931, National Library of Jerusalem.](images/1-maimonides-ibn-ezra-ms.png)
+
+### Could we begin with a "Didn't the Rambam say kishuf in Mitzrayim wasn't real?" {#kishuf}
 
 <!-- Body -->
 
