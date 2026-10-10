@@ -12,6 +12,9 @@ function smallCaps() {
     const ps = document.querySelectorAll(selector);
     for (var i = 0; i < ps.length; i++) {
         let p = ps[i];
+        // keep a drop cap out of the word split below
+        let dc = p.querySelector(":scope > .dc");
+        if (dc) dc.remove();
         // store first 4 words, and remove them
         let four = p.innerHTML.split(" ").slice(0, 4).join(" ");
         p.innerHTML = p.innerHTML.replace(four, "");
@@ -19,6 +22,7 @@ function smallCaps() {
         let sc = "<span class=sc>";
         sc += four + "</span>";
         p.insertAdjacentHTML("afterbegin", sc);
+        if (dc) p.insertAdjacentElement("afterbegin", dc);
     }
 }
 
