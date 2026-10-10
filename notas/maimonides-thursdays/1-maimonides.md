@@ -10,7 +10,7 @@
 
 ![Why did I say that?! What a fool![^2]](images/2-kurt-what-a-fool.png)
 
-After every Thursday class I was left with the same question: how do you teach non-Christian philosophy to an audience that hasn't been, and probably won't be, educated in any religious language (if it has been educated even in Christian language at all), so that they can read and understand philosophical questions rooted in non-Western traditions?
+Every Thursday class left me with the same question: how do you teach non-Christian philosophy to an audience that hasn't been, and probably won't be, educated in any religious language (if it has been educated even in Christian language at all), so that they can read and understand philosophical questions rooted in non-Western traditions?
 
 This led me to keep repeating that "Thursday's class could really get to the point and go through the Kotzker, Munkatch, Klausenburg, the Gr"a and Rav Kapach on *sheidim* (demons) and *kishuf* (magic). A simple 'Didn't the Rambam say kishuf in Mitzrayim wasn't real?' would do the trick,"[^4] until I finally realized it probably wouldn't work at all.[^5] In the end, not only is this not a yeshiva class, but the students always need endless introductions: "What is Sephardic Judaism?", "What is halakha?", "How does Jewish religion even work?".
 
@@ -36,7 +36,7 @@ The upshot: there is, in the Rambam, a radical difference between speaking of fo
 
 ### Olam ke-minhago noheg: Maimonides and the Raavad {#olam-keminhago}
 
-Above all, it is essential to understand that when the tradition speaks of the days of the Mashiach, the question is not a "magical world," but where exactly the change happens. The most influential reading holds that nature keeps operating as always (*olam keminhago noheg*) while history reorganizes itself. The aim of the classes was to explore notions diverging from Maimonides's.
+It is essential to understand that when the tradition speaks of the days of the Mashiach, the question is not a "magical world," but where exactly the change happens. The most influential reading holds that nature keeps operating as always (*olam keminhago noheg*) while history reorganizes itself. The aim of the classes was to explore notions diverging from Maimonides's.
 
 <blockquote>
 **Seven things were created before the world was created:** the Torah, repentance (*teshuva*), the Garden of Eden, Gehenna, the Throne of Glory, the Temple, and the name of the Messiah. (Pesachim 54a)
