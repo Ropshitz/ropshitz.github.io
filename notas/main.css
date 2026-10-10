@@ -471,3 +471,12 @@ a#home-link[href] {
     font-size: 1.2em;
     margin-bottom: 3em;
 }
+
+/* illustrated initials (see dropcap.lua) */
+
+img.dc {
+    float: left;
+    height: 5.3em;
+    width: auto;
+    margin: 0.1em 0.55em 0 0;
+}
