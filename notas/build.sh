@@ -39,7 +39,7 @@ for i in "${posts[@]}"; do
     summary=$(sed -n 3p $i/meta.txt)
 
     # Post page
-    pandoc $i/[0-99]*.md $i/$FN -o $TEMP
+    pandoc --lua-filter=dropcap.lua $i/[0-99]*.md $i/$FN -o $TEMP
     cp header.html $i.html
     echo '        <p id="back-top"><a href="./">← Todas as notas</a></p>' >> $i.html
     echo "        <p id=\"title-info\">by Maga, $date.</p>" >> $i.html

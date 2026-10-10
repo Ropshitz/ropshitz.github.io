@@ -2,6 +2,8 @@
 @font-face { font-family: 'ap'; font-weight: bold; src: url('fonts/bold.otf') format('opentype'); }
 @font-face { font-family: 'ap'; font-style: italic; src: url('fonts/italic.otf') format('opentype'); }
 @font-face { font-family: 'ap'; font-weight: bold; font-style: italic; src: url('fonts/bolditalic.otf') format('opentype'); }
+@font-face { font-family: 'EB Garamond Initials F1'; src: url('fonts/EBGaramond-InitialsF1.otf') format('opentype'); }
+@font-face { font-family: 'EB Garamond Initials F2'; src: url('fonts/EBGaramond-InitialsF2.otf') format('opentype'); }
 
 html {
     /* --pale: #fdfdfc; */
@@ -470,4 +472,28 @@ a#home-link[href] {
     color: var(--lightgrey);
     font-size: 1.2em;
     margin-bottom: 3em;
+}
+
+/* drop caps: ornamented initials, two stacked layers (see dropcap.lua) */
+
+.dc {
+    float: left;
+    position: relative;
+    font-size: 4.6em;
+    line-height: 0.85;
+    margin: 0.04em 0.1em 0 0;
+}
+
+.dc .bg {
+    font-family: 'EB Garamond Initials F1';
+    color: var(--red);
+    opacity: 0.3;
+}
+
+.dc .fg {
+    font-family: 'EB Garamond Initials F2';
+    color: var(--red);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
