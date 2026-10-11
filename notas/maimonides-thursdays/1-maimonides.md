@@ -52,6 +52,8 @@ In *Hilchot Melachim u-Milchamot* 12:1–2, Maimonides sets out the principle th
 "Let it not occur to you [to think] that, during the days of the Mashiach, [even] a single thing of the 'ways of the world' [the natural order of things] would be cancelled, or that there will be anything new in Creation. Rather, [during the days of the Mashiach] the world will continue in its usual way (*olam keminhago noheg*). As for what is said in Isaiah 11:6, 'the wolf shall dwell with the lamb, and the leopard shall lie down with the kid,' it is a parable and a riddle."
 </blockquote>
 
+![Which is the victim?!](images/4-xavier-which-victim.png)
+
 The Raavad, in his *hasagot*, records an objection based on Leviticus 26:6 ("And I will remove evil beasts from the land"), stressing that this is a verse of the Torah. The methodological point is that, unlike the usual imagery in the Prophets, a statement of the Torah should not be dismissed as mere metaphor; at the very least, it demands a concrete effect in the reality described. The tension, then, is not only between "metaphor" and "literalness," but between domains: the Rambam comprehensively codifies the continuity of the natural course and therefore systematically reads Isaiah non-literally, whereas the Raavad demands that the promise formulated in the Torah translate into some verifiable form, even if its fulfillment is understood as the restoration of a prior state (and not the creation of a new nature).
 
 <blockquote>
