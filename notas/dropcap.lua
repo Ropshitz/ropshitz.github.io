@@ -3,8 +3,8 @@
 -- images/initials/<letter>.png and images/initials/dark/<letter>.png.
 -- In a theme that has no drawing for that letter, the plain letter is shown.
 
-local light = { b=true, d=true, e=true, i=true, z=true }
-local dark  = { b=true, d=true, e=true, i=true, m=true, z=true }
+local light = { a=true, b=true, d=true, e=true, i=true, z=true }
+local dark  = { a=true, b=true, d=true, e=true, i=true, m=true, z=true }
 
 local function dropcap(para)
   local first = para.content[1]
