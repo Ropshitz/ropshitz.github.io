@@ -498,7 +498,7 @@ a#home-link[href] {
     display: block;
     height: 100%;
     width: auto;
-    transition: opacity 0.7s ease;
+    transition: opacity 0.8s ease; /* same duration and easing as the theme colors */
 }
 
 /* a letter with drawings in both themes: stack them and cross-fade */
