@@ -485,7 +485,7 @@ a#home-link[href] {
     margin-bottom: 3em;
 }
 
-/* illustrated initials (see dropcap.lua): light and dark versions stacked */
+/* illustrated initials (see dropcap.lua): each theme has its own drawings */
 
 .dc {
     float: left;
@@ -498,18 +498,33 @@ a#home-link[href] {
     display: block;
     height: 100%;
     width: auto;
+    transition: opacity 0.7s ease;
 }
 
-.dc img.dark {
+/* a letter with drawings in both themes: stack them and cross-fade */
+.dc.has-light.has-dark img.dark {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.7s ease;
 }
 
-html[data-theme="dark"] .dc img.dark { opacity: 1; }
+html[data-theme="dark"] .dc.has-light.has-dark img.dark { opacity: 1; }
+html[data-theme="dark"] .dc.has-light.has-dark img.light { opacity: 0; }
+
+/* the plain letter, shown only where the theme has no drawing for it */
+.dc-letter { display: none; }
+
+html[data-theme="light"] .dc:not(.has-light),
+html[data-theme="dark"] .dc:not(.has-dark) { display: none; }
+
+html[data-theme="light"] .dc:not(.has-light) + .dc-letter,
+html[data-theme="dark"] .dc:not(.has-dark) + .dc-letter { display: inline; }
+
+/* a drawing that exists in one theme only */
+html[data-theme="dark"] .dc.has-dark:not(.has-light) img.dark,
+html[data-theme="light"] .dc.has-light:not(.has-dark) img.light { opacity: 1; }
 
 /* theme toggle */
 

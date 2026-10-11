@@ -15,7 +15,9 @@ function smallCaps() {
         let p = ps[i];
         // keep an illustrated initial out of the word split below
         let dc = p.querySelector(":scope > .dc");
+        let dl = p.querySelector(":scope > .dc-letter");
         if (dc) dc.remove();
+        if (dl) dl.remove();
         // store first 4 words, and remove them
         let four = p.innerHTML.split(" ").slice(0, 4).join(" ");
         p.innerHTML = p.innerHTML.replace(four, "");
@@ -23,6 +25,7 @@ function smallCaps() {
         let sc = "<span class=sc>";
         sc += four + "</span>";
         p.insertAdjacentHTML("afterbegin", sc);
+        if (dl) p.insertAdjacentElement("afterbegin", dl);
         if (dc) p.insertAdjacentElement("afterbegin", dc);
     }
 }
