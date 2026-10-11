@@ -23,7 +23,9 @@ TEMP=temp.html
 
 months=(jan fev mar abr mai jun jul ago set out nov dez)
 
-cp header.html index.html
+# cache-busting version for the css/js links, so browsers never mix old and new files
+V=$(cat main.css desktop.css script.js | md5sum | cut -c1-8)
+sed "s/__V__/$V/g" header.html > index.html
 cat >> index.html <<HEAD
         <p class="list-heading">Todas as notas</p>
         <p class="ornament">❦</p>
@@ -40,7 +42,7 @@ for i in "${posts[@]}"; do
 
     # Post page
     pandoc --lua-filter=dropcap.lua $i/[0-99]*.md $i/$FN -o $TEMP
-    cp header.html $i.html
+    sed "s/__V__/$V/g" header.html > $i.html
     echo '        <p id="back-top"><a href="./">← Todas as notas</a></p>' >> $i.html
     echo "        <p id=\"title-info\">by Maga, $date.</p>" >> $i.html
     cat $i/contents.html >> $i.html

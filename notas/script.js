@@ -130,7 +130,7 @@ function themeToggle() {
             try { localStorage.setItem("theme", theme); } catch (e) {}
             sync();
             clearTimeout(timer);
-            timer = setTimeout(() => root.classList.remove("theme-fade"), 800);
+            timer = setTimeout(() => root.classList.remove("theme-fade"), 900);
         };
     });
 }

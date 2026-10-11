@@ -589,12 +589,22 @@ html[data-theme="dark"] #theme-toggle .thumb { transform: translateX(30px); }
 #theme-toggle button[aria-pressed="true"] svg { transform: rotate(360deg); }
 #theme-toggle button[aria-pressed="false"] svg { transform: rotate(0deg); }
 
-/* smooth switch between themes (class is added by script.js while switching) */
+/* smooth switch between themes: the theme colors are registered as <color>
+ * custom properties, so they interpolate on the root and every element that
+ * uses them follows frame by frame (no per-element transitions to compound).
+ * The class is added by script.js only while switching. */
 
-html.theme-fade,
-html.theme-fade *,
-html.theme-fade *::before,
-html.theme-fade *::after {
-    transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease,
-                opacity 0.7s ease, fill 0.7s ease, stroke 0.7s ease !important;
+@property --pale      { syntax: '<color>'; inherits: true; initial-value: white; }
+@property --red       { syntax: '<color>'; inherits: true; initial-value: #a14a3f; }
+@property --black     { syntax: '<color>'; inherits: true; initial-value: #1a0f00; }
+@property --dim       { syntax: '<color>'; inherits: true; initial-value: #33330011; }
+@property --lightgrey { syntax: '<color>'; inherits: true; initial-value: #d2d2d2; }
+@property --lightblue { syntax: '<color>'; inherits: true; initial-value: #e7eff6; }
+@property --blue      { syntax: '<color>'; inherits: true; initial-value: rgb(15, 52, 128); }
+@property --rule      { syntax: '<color>'; inherits: true; initial-value: #000000aa; }
+
+html.theme-fade {
+    transition: --pale 0.8s ease, --red 0.8s ease, --black 0.8s ease,
+                --dim 0.8s ease, --lightgrey 0.8s ease, --lightblue 0.8s ease,
+                --blue 0.8s ease, --rule 0.8s ease;
 }
