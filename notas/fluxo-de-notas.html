@@ -3,12 +3,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Maga's Philosophy Notes</title>
+        <script>
+            // set the theme before first paint, to avoid a flash
+            (function () {
+                var t = null;
+                try { t = localStorage.getItem('theme'); } catch (e) {}
+                if (t !== 'light' && t !== 'dark') {
+                    t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.dataset.theme = t;
+            })();
+        </script>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="desktop.css">
         <link rel="icon" type="image/png" href="./favicon.png"/>
         <script src="script.js"></script>
     </head>
     <body>
+        <div id="theme-toggle" role="group" aria-label="Tema">
+        <span class="thumb"></span>
+        <button type="button" data-theme-set="light" aria-label="Tema claro" title="Tema claro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+        <button type="button" data-theme-set="dark" aria-label="Tema escuro" title="Tema escuro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        </button>
+        </div>
         <div id="title-wrap">
         <a id="home-link" href="./">
         <h5 id="pre-author">Notas de</h5>
@@ -133,10 +153,10 @@ from file</figcaption>
 </figure>
 <p>But what about the other ones?</p>
 <h3 id="better-notes">Better Notes and Syncing</h3>
-<p><img class="dc" src="images/initials/d.png" alt="D">o you remember we
-talked about Obsidian? The nicest way is probably to download it and set
-it up to push your changes to Github right away. For that, I would
-install <a
+<p><span class="dc"><img class="light" src="images/initials/d.png" alt="D"><img class="dark" src="images/initials/dark/d.png" alt="" aria-hidden="true"></span>o
+you remember we talked about Obsidian? The nicest way is probably to
+download it and set it up to push your changes to Github right away. For
+that, I would install <a
 href="https://github.com/windingwind/zotero-better-notes/releases">zotero-better-notes</a>.
 And then you just pull the notes in Markdown and drop them there. With
 everything set up in Obsidian and Github, you will never have to worry

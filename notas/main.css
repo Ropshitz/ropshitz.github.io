@@ -12,6 +12,19 @@ html {
     --lightgrey: #d2d2d2;
     --lightblue: #e7eff6;
     --blue: rgb(15, 52, 128);
+    --rule: #000000aa;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --pale: #1a1919;
+    --red: #7da06a;       /* lighter tint of #4a673f, for legible text */
+    --black: #e6e1d6;
+    --dim: #ffffff12;
+    --lightgrey: #3d3b39;
+    --lightblue: #2b3d26;
+    --blue: #94b385;
+    --rule: #4a673f;
 }
 
 body {
@@ -472,11 +485,101 @@ a#home-link[href] {
     margin-bottom: 3em;
 }
 
-/* illustrated initials (see dropcap.lua) */
+/* illustrated initials (see dropcap.lua): light and dark versions stacked */
 
-img.dc {
+.dc {
     float: left;
+    position: relative;
     height: 5.3em;
-    width: auto;
     margin: 0.1em 0.55em 0 0;
+}
+
+.dc img {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.dc img.dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+html[data-theme="dark"] .dc img.dark { opacity: 1; }
+
+/* theme toggle */
+
+#theme-toggle {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    z-index: 10;
+    display: flex;
+    padding: 3px;
+    border: 1px solid var(--lightgrey);
+    border-radius: 999px;
+    background: var(--pale);
+}
+
+#theme-toggle .thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--red);
+    opacity: 0.22;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.25, 1);
+}
+
+html[data-theme="dark"] #theme-toggle .thumb { transform: translateX(30px); }
+
+#theme-toggle button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    color: var(--black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+}
+
+#theme-toggle button:hover,
+#theme-toggle button[aria-pressed="true"] { opacity: 1; }
+
+#theme-toggle button:focus-visible { outline: 2px solid var(--red); outline-offset: 1px; }
+
+#theme-toggle svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.25, 1);
+}
+
+#theme-toggle button[aria-pressed="true"] svg { transform: rotate(360deg); }
+#theme-toggle button[aria-pressed="false"] svg { transform: rotate(0deg); }
+
+/* smooth switch between themes (class is added by script.js while switching) */
+
+html.theme-fade,
+html.theme-fade *,
+html.theme-fade *::before,
+html.theme-fade *::after {
+    transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease,
+                opacity 0.7s ease, fill 0.7s ease, stroke 0.7s ease !important;
 }

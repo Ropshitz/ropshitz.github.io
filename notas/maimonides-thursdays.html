@@ -3,12 +3,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Maga's Philosophy Notes</title>
+        <script>
+            // set the theme before first paint, to avoid a flash
+            (function () {
+                var t = null;
+                try { t = localStorage.getItem('theme'); } catch (e) {}
+                if (t !== 'light' && t !== 'dark') {
+                    t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.dataset.theme = t;
+            })();
+        </script>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="desktop.css">
         <link rel="icon" type="image/png" href="./favicon.png"/>
         <script src="script.js"></script>
     </head>
     <body>
+        <div id="theme-toggle" role="group" aria-label="Tema">
+        <span class="thumb"></span>
+        <button type="button" data-theme-set="light" aria-label="Tema claro" title="Tema claro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+        <button type="button" data-theme-set="dark" aria-label="Tema escuro" title="Tema escuro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        </button>
+        </div>
         <div id="title-wrap">
         <a id="home-link" href="./">
         <h5 id="pre-author">Notas de</h5>
@@ -50,11 +70,11 @@ alt="Why did I say that?! What a fool!" />
 href="#fn2" class="footnote-ref" id="fnref2"
 role="doc-noteref"><sup>2</sup></a></figcaption>
 </figure>
-<p><img class="dc" src="images/initials/e.png" alt="E">very Thursday
-class left me with the same question: how do you teach non-Christian
-philosophy to an audience that hasn’t been, and probably won’t be,
-educated in any religious language (if it has been educated even in
-Christian language at all), so that they can read and understand
+<p><span class="dc"><img class="light" src="images/initials/e.png" alt="E"><img class="dark" src="images/initials/dark/e.png" alt="" aria-hidden="true"></span>very
+Thursday class left me with the same question: how do you teach
+non-Christian philosophy to an audience that hasn’t been, and probably
+won’t be, educated in any religious language (if it has been educated
+even in Christian language at all), so that they can read and understand
 philosophical questions rooted in non-Western traditions?</p>
 <p>This led me to keep repeating that “Thursday’s class could really get
 to the point and go through the Kotzker, Munkatch, Klausenburg, the Gr”a
@@ -132,13 +152,13 @@ understood, that is, grounded in reason.<a href="#fn8"
 class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
 <h3 id="olam-keminhago">Olam ke-minhago noheg: Maimonides and the
 Raavad</h3>
-<p><img class="dc" src="images/initials/i.png" alt="I">t is essential to
-understand that when the tradition speaks of the days of the Mashiach,
-the question is not a “magical world,” but where exactly the change
-happens. The most influential reading holds that nature keeps operating
-as always (<em>olam keminhago noheg</em>) while history reorganizes
-itself. The aim of the classes was to explore notions diverging from
-Maimonides’s.</p>
+<p><span class="dc"><img class="light" src="images/initials/i.png" alt="I"><img class="dark" src="images/initials/dark/i.png" alt="" aria-hidden="true"></span>t
+is essential to understand that when the tradition speaks of the days of
+the Mashiach, the question is not a “magical world,” but where exactly
+the change happens. The most influential reading holds that nature keeps
+operating as always (<em>olam keminhago noheg</em>) while history
+reorganizes itself. The aim of the classes was to explore notions
+diverging from Maimonides’s.</p>
 <blockquote>
 <p><strong>Seven things were created before the world was
 created:</strong> the Torah, repentance (<em>teshuva</em>), the Garden

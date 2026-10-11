@@ -80,7 +80,7 @@ blockquote p,
 /* JavaScript elements -------------------------------------- */
 
 #hover-note {
-    border-left: 1px solid #000000aa;
+    border-left: 1px solid var(--rule);
 
     position: fixed;
     opacity: 0; /* see script.js */

@@ -5,6 +5,7 @@ window.onload = function () {
     hoverNotes();    // hover over a footnote number to see the note.
     bibLink();       // add link to bibliography below footnotes, if present.
     followHeading(); // note the heading of the current section at the top
+    themeToggle();   // sun / moon buttons to switch between light and dark.
 };
 
 function smallCaps() {
@@ -101,5 +102,32 @@ function followHeading() {
         if (notes && notes.getBoundingClientRect().top <= 70) {
             follow.innerHTML = "";
         }
+    });
+}
+
+function themeToggle() {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll("[data-theme-set]");
+    let timer;
+
+    function sync() {
+        buttons.forEach((b) =>
+            b.setAttribute("aria-pressed", b.dataset.themeSet === root.dataset.theme)
+        );
+    }
+    sync();
+
+    buttons.forEach((b) => {
+        b.onclick = () => {
+            const theme = b.dataset.themeSet;
+            if (theme === root.dataset.theme) return;
+            // fade colors smoothly, only while switching
+            root.classList.add("theme-fade");
+            root.dataset.theme = theme;
+            try { localStorage.setItem("theme", theme); } catch (e) {}
+            sync();
+            clearTimeout(timer);
+            timer = setTimeout(() => root.classList.remove("theme-fade"), 800);
+        };
     });
 }
