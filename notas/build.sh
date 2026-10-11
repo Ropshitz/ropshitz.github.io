@@ -18,6 +18,9 @@
 
 posts=('maimonides-thursdays' 'fluxo-de-notas')
 
+# pages that are built but not listed on the front page
+unlisted=('iniciais-teste')
+
 FN=x-footnotes.md
 TEMP=temp.html
 
@@ -32,7 +35,7 @@ cat >> index.html <<HEAD
         <ol id="posts">
 HEAD
 
-for i in "${posts[@]}"; do
+for i in "${posts[@]}" "${unlisted[@]}"; do
     title=$(sed -n 1p $i/meta.txt)
     iso=$(sed -n 2p $i/meta.txt)
     date=$(LC_ALL=C date -d "$iso" '+%B %-d, %Y')
@@ -49,6 +52,9 @@ for i in "${posts[@]}"; do
     cat $TEMP >> $i.html
     echo '<p id="back"><a href="./">← Todas as notas</a></p>' >> $i.html
     rm $TEMP
+
+    # unlisted pages get no entry on the front page
+    if [[ " ${unlisted[*]} " == *" $i "* ]]; then continue; fi
 
     # Entry on the front page
     cat >> index.html <<ENTRY

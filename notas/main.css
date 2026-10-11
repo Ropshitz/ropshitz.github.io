@@ -608,3 +608,10 @@ html.theme-fade {
                 --dim 0.8s ease, --lightgrey 0.8s ease, --lightblue 0.8s ease,
                 --blue 0.8s ease, --rule 0.8s ease;
 }
+
+/* a short paragraph still ends below its initial */
+p:has(> .dc)::after {
+    content: "";
+    display: block;
+    clear: both;
+}

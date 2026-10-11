@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maga's Philosophy Notes</title>
+        <script>
+            // set the theme before first paint, to avoid a flash
+            (function () {
+                var t = null;
+                try { t = localStorage.getItem('theme'); } catch (e) {}
+                if (t !== 'light' && t !== 'dark') {
+                    t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.dataset.theme = t;
+            })();
+        </script>
+        <link rel="stylesheet" href="main.css?v=47a81035">
+        <link rel="stylesheet" href="desktop.css?v=47a81035">
+        <link rel="icon" type="image/png" href="./favicon.png"/>
+        <script src="script.js?v=47a81035"></script>
+    </head>
+    <body>
+        <div id="theme-toggle" role="group" aria-label="Tema">
+        <span class="thumb"></span>
+        <button type="button" data-theme-set="light" aria-label="Tema claro" title="Tema claro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+        <button type="button" data-theme-set="dark" aria-label="Tema escuro" title="Tema escuro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        </button>
+        </div>
+        <div id="title-wrap">
+        <a id="home-link" href="./">
+        <h5 id="pre-author">Notas de</h5>
+        <h4 id="author">Maga</h4>
+        </a>
+        <img id="title-mascot" src="doom-mascot.png" alt="Doctor Doom"/>
+        </div>
+        <p id="back-top"><a href="./">← Todas as notas</a></p>
+        <p id="title-info">by Maga, October 10, 2026.</p>
+<ol id="contents">
+    <li>Iniciais ilustradas
+        <ol>
+            <li><a href="#b">B</a></li>
+            <li><a href="#m">M</a></li>
+            <li><a href="#z">Z</a></li>
+            <li><a href="#d">D, E e I</a></li>
+        </ol>
+    </li>
+</ol>
+<section class="content">
+<h2 id="pipeline">Iniciais ilustradas</h2>
+<p>Página de teste das letras capitulares, não listada na página
+inicial. Troque o tema no botão do canto superior direito para ver cada
+conjunto de letras.</p>
+<h3 id="b">B: nos dois temas</h3>
+<p><span class="dc has-light has-dark"><img class="light" src="images/initials/b.png" alt="B"><img class="dark" src="images/initials/dark/b.png" alt="B"></span><span class="dc-letter">B</span>etween
+the lecture hall and the reading room there is a long corridor, and for
+years I have used it to rehearse the questions I was too shy to ask
+aloud. Most of them dissolved by the time I reached the door; a few
+stayed, and those are the ones that turned into notes.</p>
+<p>This second paragraph has no initial, so you can compare how the
+first one sits against ordinary text, with its indentation and justified
+lines running right up to the edge of the illustration.</p>
+<h3 id="m">M: só no tema escuro</h3>
+<p><span class="dc has-dark"><img class="dark" src="images/initials/dark/m.png" alt="M"></span><span class="dc-letter">M</span>any
+of the arguments that seem decisive in a seminar room lose their force
+on a second reading, and I have learned to distrust the feeling of
+having won. What survives is usually smaller and plainer than what we
+set out to defend, and that is not a defeat.</p>
+<p>The light theme shows the plain letter here, because there is no
+light drawing of this one.</p>
+<h3 id="z">Z: nos dois temas</h3>
+<p><span class="dc has-light has-dark"><img class="light" src="images/initials/z.png" alt="Z"><img class="dark" src="images/initials/dark/z.png" alt="Z"></span><span class="dc-letter">Z</span>ero
+is a strange number to teach, because students arrive believing they
+already understand it. The history of its arrival in Europe, through
+Arabic and Sanskrit sources that few of them have heard of, tends to
+unsettle that confidence in a useful way.</p>
+<p>Both the light and the dark drawings exist for this letter, so
+toggling the theme should cross-fade between them.</p>
+<h3 id="d">D, E e I: só no tema claro</h3>
+<p><span class="dc has-light"><img class="light" src="images/initials/d.png" alt="D"></span><span class="dc-letter">D</span>ark
+theme aside, these three are the drawings used on the real posts. They
+appear in the light theme and fall back to the plain letter in the dark
+one.</p>
+<p>Every paragraph after a heading is a candidate for an initial, but
+only when its first letter has a drawing in the current theme.</p>
+</section>
+<p id="back"><a href="./">← Todas as notas</a></p>
