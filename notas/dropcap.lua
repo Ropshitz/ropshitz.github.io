@@ -4,7 +4,7 @@
 -- In a theme that has no drawing for that letter, the plain letter is shown.
 
 local light = { b=true, d=true, e=true, i=true, z=true }
-local dark  = { m=true, z=true }
+local dark  = { b=true, m=true, z=true }
 
 local function dropcap(para)
   local first = para.content[1]
