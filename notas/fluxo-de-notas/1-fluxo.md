@@ -62,9 +62,7 @@ Do you remember we talked about Obsidian? The nicest way is probably to download
 
 ### OCR with Tesseract {#ocr}
 
-Interested in OCR?
-
-You will need the open-source OCR engine called Tesseract. It's pretty easy, and once installed it even works inside your Terminal, without the need of Zotero.
+Interested in OCR? You will need the open-source OCR engine called Tesseract. It's pretty easy, and once installed it even works inside your Terminal, without the need of Zotero.
 
 The latest installer can be downloaded here: [tesseract-ocr-w64-setup-5.5.3.20260724.exe](https://github.com/tesseract-ocr/tesseract/releases/download/5.5.3/tesseract-ocr-w64-setup-5.5.3.20260724.exe) (64 bit).
 

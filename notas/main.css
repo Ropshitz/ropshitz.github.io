@@ -609,9 +609,8 @@ html.theme-fade {
                 --blue 0.8s ease, --rule 0.8s ease;
 }
 
-/* a short paragraph still ends below its initial */
-p:has(> .dc)::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+/* a short paragraph lets the next one wrap beside its initial (no empty gap);
+ * headings and figures always start below it */
+p:has(> .dc) + p { text-indent: 0; }
+
+h2, h3, .content figure { clear: both; }
