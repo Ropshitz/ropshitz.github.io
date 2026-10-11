@@ -20,7 +20,7 @@ Jan Westerhoff's *Nāgārjuna's Madhyamaka: A Philosophical Introduction* offers
 
 ### "You gotta believe in yourself?" No, not really, only knowledge remains: R. Yosef Kapach {#kapach}
 
-According to R. Fox, one of the key themes of *emuna* already discussed in the *Mishneh Torah* and other works of Maimonides appears in Shabbat 31a, which lists the six questions a person is asked at the Judgment. One of them is "[ציפית לישועה?]{lang=he dir=rtl}" ("Did you await salvation [redemption]?"), a tradition many understand as the duty to anticipate the Mashiach's coming every day. This expectation also dialogues with the twelfth of the so-called Thirteen Principles of the Rambam.
+In R. Fox's reading, one of the key themes of *emuna* already discussed in the *Mishneh Torah* and other works of Maimonides appears in Shabbat 31a, which lists the six questions a person is asked at the Judgment. One of them is "[ציפית לישועה?]{lang=he dir=rtl}" ("Did you await salvation [redemption]?"), a tradition many understand as the duty to anticipate the Mashiach's coming every day. This expectation also dialogues with the twelfth of the so-called Thirteen Principles of the Rambam.
 
 *A caveat on vocabulary:* the Rambam does not use "Yesodei Emuna" ([יסודי אמונה]{lang=he dir=rtl}) as a technical title of his own. What he uses, precisely, is "Yesodei ha-Torah" ([יסודי התורה]{lang=he dir=rtl}, in the Mishneh Torah) and, in the Perek Chelek ([פרק חלק]{lang=he dir=rtl}), he speaks of *ikkarim* ([עיקרים]{lang=he dir=rtl}) and "yesodei ha-dat" ([יסודי הדת]{lang=he dir=rtl}). "Yesodei emuna" is a later, editorial formulation, very common in popular editions.
 
