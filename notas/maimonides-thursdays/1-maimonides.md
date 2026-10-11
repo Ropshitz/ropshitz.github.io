@@ -62,4 +62,6 @@ The Raavad, in his *hasagot*, records an objection based on Leviticus 26:6 ("And
 <span lang="he" dir="rtl">לא יעלה על הלב שבימות המשיח וכו' עד משלים. א״א: והלא כתוב בתורה והשבתי חיה רעה מן הארץ (ויקרא כו, ו).</span>
 </blockquote>
 
+![And which the killer?!!](images/4-xavier-which-killer.png)
+
 A *brisker* nuance (attributed in the *masora* to the Brisker Rav) reinforces the force of the Raavad's argument: according to the Rambam himself (*Yesodei ha-Torah*), Moshe's prophecy does not come "[בְּמָשָׁל וְחִידָה]{lang=he dir=rtl}" (in parable and riddle); hence verses of the Torah would tend to be literal. How, then, would the Rambam deal with "[וְהִשְׁבַּתִּי חַיַּה רָעָה]{lang=he dir=rtl}"?
