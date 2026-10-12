@@ -614,3 +614,28 @@ html.theme-fade {
 p:has(> .dc) + p { text-indent: 0; }
 
 h2, h3, .content figure { clear: both; }
+
+/* small screens: let long titles in the contents wrap instead of widening the page */
+@media (max-width: 767px) {
+    #contents {
+        white-space: normal;
+        padding-left: 1.8rem;
+        margin-bottom: 3em;
+    }
+
+    #contents > li::before {
+        width: 1.2rem;
+        transform: translate(-1.8rem);
+    }
+
+    #contents li li { margin-bottom: 0.25em; }
+}
+
+/* small screens: keep the theme toggle clear of the mascot next to the title */
+@media (max-width: 767px) {
+    #theme-toggle {
+        right: auto;
+        left: 12px;
+        top: 12px;
+    }
+}
